@@ -9,10 +9,10 @@ class DAO:
         conn = DBConnect.get_connection()
         result = []
         cursor = conn.cursor(dictionary=True)
-        query = """
+        query = """""
                 SELECT *
                 FROM artist a
-                """
+                """""
         cursor.execute(query)
         for row in cursor:
             artist = Artist(id=row['id'], name=row['name'])
