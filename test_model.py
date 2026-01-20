@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import networkx as nx
 from model.model import Model
 
@@ -46,4 +45,11 @@ nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
 plt.savefig("plot")
 plt.show()
 """
+my_model.load_artists_with_min_albums(0)
+my_model.build_graph(0)
 
+for edge in my_model._graph.edges(data = True):
+    print(edge)
+
+a, b = my_model.ricerca_percorso(5, 84)
+print(a, b)

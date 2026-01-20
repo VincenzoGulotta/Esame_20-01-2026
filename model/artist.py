@@ -4,6 +4,7 @@ from dataclasses import dataclass
 class Artist:
     id : int
     name : str
+    minuti_max = float
 
     def __str__(self):
         return f"{self.id}, {self.name}"
